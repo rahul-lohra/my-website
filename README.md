@@ -2,7 +2,7 @@
 
 An editorial portfolio and technical blog, built as a TypeScript monorepo. Astro generates real HTML pages; React handles search and topic filtering. A small Cloudflare Worker serves a read-only API. The frontend never requires the API, so every article and project stays readable when the Worker is offline.
 
-Nothing here changes the existing website, DNS, or paid services. Deployment is manual and disabled until explicitly enabled.
+The frontend is live at https://www.rahullohra.com/ on GitHub Pages. Deployment remains manual through GitHub Actions. No paid hosting plan was enabled; the optional Cloudflare API has not been deployed.
 
 ## Structure
 
@@ -139,9 +139,21 @@ pnpm --dir backend deploy
 
 The API uses a separate `workers.dev` URL; static pages do not need it. Keep tokens out of source, URLs, and frontend bundles.
 
-### Later: connect rahullohra.com
+### Production domain: www.rahullohra.com
 
-Keep the existing site and its DNS settings until the new repository URL passes review. Save the existing DNS records and hosting settings for rollback. When ready, configure the custom domain in the new repository's Pages settings and verify domain ownership according to GitHub's instructions. Set `SITE_URL=https://rahullohra.com`, `BASE_PATH=/`, rebuild, and add the domain's CNAME file if required by Pages. Follow GitHub's current apex/`www` DNS guidance and enable HTTPS after validation. Add the exact domain origin to Worker CORS and redeploy the Worker. Recheck old dated URLs, RSS, canonical metadata, and mobile pages. Roll back DNS/Pages settings to the previous site if needed. This implementation performs none of these external changes.
+The custom domain was connected on 26 October 2026. GitHub Pages is enabled for `rahul-lohra/my-website`, with these repository Actions variables:
+
+```text
+ENABLE_PAGES_DEPLOY=true
+SITE_URL=https://www.rahullohra.com
+BASE_PATH=/
+```
+
+The domain is verified under the `rahul-lohra` GitHub account. Keep the `_github-pages-challenge-rahul-lohra` DNS TXT record to retain verification. DNS uses `www` CNAME → `rahul-lohra.github.io` and the existing four GitHub Pages apex A records. HTTPS is enforced; `rahullohra.com` redirects to `https://www.rahullohra.com/`.
+
+The custom-domain association was removed from `myblog`; the old repository remains available as a backup. The production deployment passed validation in [GitHub Actions run 40228654863](https://github.com/rahul-lohra/my-website/actions/runs/40228654863). The live domain, all public content pages, the résumé PDF, feeds, sampled dated article compatibility URLs, apex/HTTP redirects, and the custom 404 were checked after the handover.
+
+For future updates, push changes and manually run **Deploy frontend to GitHub Pages**. Keep the production variables above. A CNAME file is not required with the custom Actions publishing workflow. If deploying the optional Worker later, add `https://www.rahullohra.com` to its exact allowed CORS origins before deployment.
 
 ### Free-tier constraints & official references
 
@@ -167,4 +179,4 @@ Both origin-root and `/my-website/` production builds passed schema/TypeScript c
 
 Browser QA exercised blog search with combined topic filtering, empty results and reset, project search and details, article refresh, local images, code copying, and a legacy dated redirect. All 20 public pages were checked at 390px with no horizontal overflow or broken loaded images. Representative pages also passed at 320px and 768px, with desktop visual review. The frontend remained usable after the local API was stopped. No browser console errors were observed in the final preview.
 
-No live deployment or DNS changes were performed. Remaining setup: review the local preview, push to your intended GitHub repository, configure Pages variables and Cloudflare secrets, and manually run each deployment workflow. Add real RAG content when ready; the user-supplied résumé is now integrated.
+The frontend deployment and custom-domain handover are complete. The optional Cloudflare Worker still requires account credentials and a separate deployment; it is not required to browse the website. Add real RAG content when ready; the user-supplied résumé is integrated.

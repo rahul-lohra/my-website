@@ -1,0 +1,65 @@
+# Dependencies and local package-manager stores
+node_modules/
+.pnpm-store/
+.npm/
+.yarn/cache/
+
+# Astro/Vite builds, generated types, and caches
+dist/
+.astro/
+.vite/
+.cache/
+*.tsbuildinfo
+
+# Cloudflare Wrangler / Miniflare local state
+.wrangler/
+.mf/
+
+# Test coverage and browser-test artifacts
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+blob-report/
+
+# Local environment variables and secrets (keep safe examples)
+.env
+.env.*
+!.env.example
+!.env.*.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+!.dev.vars.*.example
+
+# Logs and crash dumps
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.cpuprofile
+*.heapsnapshot
+
+# JetBrains and local VS Code state; retain useful shared VS Code config
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.history/
+*.swp
+*.swo
+*~
+
+# Operating-system metadata
+.DS_Store
+.AppleDouble
+._*
+Thumbs.db
+Desktop.ini
+
+# Keep pnpm-lock.yaml, source content, imported assets, the résumé PDF,
+# deployment workflows/configuration, and environment examples versioned.

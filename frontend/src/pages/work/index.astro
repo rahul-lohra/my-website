@@ -1,0 +1,5 @@
+---
+import Base from '../../layouts/Base.astro';import FilterList from '../../components/FilterList';import ProjectCard from '../../components/ProjectCard.astro';import {projects,href} from '../../lib/content';
+const items=projects.map(p=>({...p,url:href(`/work/${p.slug}/`)}));
+---
+<Base title="Work — Rahul Kumar Lohra" description="Open-source Android libraries, Flutter animation, and developer tools by Rahul Kumar Lohra."><section class="page-intro"><p class="eyebrow">THE PROJECT SHELF</p><h1>Built to be <em>useful.</em></h1><p>Tools, libraries, and experiments. A few of the problems<br class="desktop-break"/> I’ve explored through code.</p></section><div class="project-grid featured-work">{projects.filter(p=>p.featured).slice(0,2).map(project=><ProjectCard project={project}/>)}</div><section class="section"><div class="section-heading"><h2>All projects<span class="dot">.</span></h2><a class="text-link" href="https://github.com/rahul-lohra">More on GitHub ↗</a></div><FilterList client:load items={items} label="projects"/></section></Base>

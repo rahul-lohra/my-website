@@ -1,0 +1,29 @@
+---
+import '../styles/global.css';
+import ThemeControl from '../components/ThemeControl.astro';
+import {profile} from '../lib/profile';
+import {href} from '../lib/content';
+interface Props {title?:string;description?:string;type?:string;}
+const {title=`${profile.name} — ${profile.headline}`,description=profile.summary,type='website'}=Astro.props;
+const canonical=new URL(Astro.url.pathname.endsWith('/404/')?href('/404.html'):Astro.url.pathname,Astro.site);
+const nav=[['Work','/work/'],['Blog','/blog/'],['RAG','/rag/'],['About','/about/']];
+const active=(p:string)=>Astro.url.pathname.startsWith(href(p));
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="color-scheme" content="light dark"/>
+<script is:inline>
+  (()=>{
+    let preference='system';
+    try{const saved=localStorage.getItem('portfolio-theme');if(saved==='light'||saved==='dark')preference=saved;}catch{}
+    const theme=preference==='system'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):preference;
+    document.documentElement.dataset.theme=theme;
+    document.documentElement.dataset.themePreference=preference;
+    document.documentElement.style.colorScheme=theme;
+  })();
+</script><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={description}/><title>{title}</title><link rel="canonical" href={canonical}/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:type" content={type}/><meta property="og:url" content={canonical}/><meta property="og:image" content={new URL(href('/social.png'),Astro.site)}/><meta name="twitter:card" content="summary_large_image"/><link rel="icon" type="image/svg+xml" href={href('/favicon.svg')}/><link rel="alternate" type="application/rss+xml" title="Rahul’s writing" href={href('/rss.xml')}/></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="header"><a class="brand" href={href('/')} aria-label="Rahul Kumar Lohra, home"><span class="brand-mark">r<span>.</span></span><span>Rahul Kumar Lohra<span class="brand-sub">ANDROID PLATFORM ENGINEER</span></span></a><nav aria-label="Main navigation">{nav.map(([label,path])=><a aria-current={active(path)?'page':undefined} href={href(path)}>{label}</a>)}<a class="resume-link" aria-current={active('/resume/')?'page':undefined} href={href('/resume/')}>Résumé <span aria-hidden="true">↗</span></a></nav><ThemeControl/></header>
+<main id="main"><slot/></main>
+<footer class="footer"><div><a class="footer-name" href={href('/')}>Rahul Kumar Lohra<span class="dot">.</span></a><p>Built with curiosity. Shared with the community.</p></div><div class="footer-links"><a href="https://github.com/rahul-lohra">GitHub ↗</a><a href="https://www.linkedin.com/in/rahullohra/">LinkedIn ↗</a><a href="mailto:tgunix@gmail.com">Email ↗</a><a href={href('/rss.xml')}>RSS ↗</a></div><div class="footer-bottom"><span>© {new Date().getFullYear()} Rahul Kumar Lohra</span><span>Always learning. Always building.</span></div></footer>
+<script>
+ document.querySelectorAll('pre').forEach(pre=>{const button=document.createElement('button');button.className='copy-code';button.type='button';button.textContent='Copy code';button.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(pre.querySelector('code')?.textContent||'');button.textContent='Copied!';}catch{button.textContent='Select code to copy';}setTimeout(()=>button.textContent='Copy code',2500);});pre.appendChild(button);});
+</script>
+</body></html>

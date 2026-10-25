@@ -1,0 +1,7 @@
+---
+import ProjectVisual from './ProjectVisual.astro';
+import {href} from '../lib/content';
+import type {Project} from '../../../shared/schema';
+const {project:p}=Astro.props as {project:Project};
+---
+<a class="project-card" href={href(`/work/${p.slug}/`)}><ProjectVisual slug={p.slug}/><div class="project-meta"><span>{p.topic} <span class="meta-dot">/</span> {p.kind}</span><span aria-hidden="true">↗</span></div><h3>{p.title}</h3><p>{p.description}</p><div class="tags">{p.tags.map(tag=><span>{tag}</span>)}</div></a>

@@ -1,0 +1,6 @@
+---
+import {profile} from '../lib/profile';
+const {compact=false}=Astro.props as {compact?:boolean};
+const roles=compact?profile.experience.slice(0,2):profile.experience;
+---
+<ol class:list={['experience-list',{'experience-compact':compact}]}>{roles.map(role=><li class="experience-entry"><div class="experience-period">{role.start} <span aria-hidden="true">—</span> {role.end}{role.end==='Present'&&<span class="current-role">CURRENT</span>}</div><div class="experience-content"><h3>{role.company}</h3><p class="experience-role">{role.role} <span>· {role.specialty}</span></p><p class="experience-summary">{role.summary}</p>{!compact&&<ul>{role.highlights.map(point=><li>{point}</li>)}</ul>}</div></li>)}</ol>

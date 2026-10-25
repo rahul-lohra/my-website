@@ -1,0 +1,76 @@
+{
+  "posts": [
+    {
+      "slug": "ble-part-2",
+      "source": "https://github.com/rahul-lohra/myblog/blob/main/_posts/ble-chat-series/2018-12-27-ble-part-2.md",
+      "originalCharacters": 5119,
+      "importedCharacters": 4974,
+      "legacyUrls": [
+        "/ble/chat/application/2018/12/27/ble-part-2.html",
+        "/ble/chat/application/2018/12/26/ble-part-2.html"
+      ]
+    },
+    {
+      "slug": "ble-part-1",
+      "source": "https://github.com/rahul-lohra/myblog/blob/main/_posts/ble-chat-series/2018-12-27-ble-part-1.md",
+      "originalCharacters": 2187,
+      "importedCharacters": 2042,
+      "legacyUrls": [
+        "/ble/chat/application/2018/12/27/ble-part-1.html",
+        "/ble/chat/application/2018/12/26/ble-part-1.html"
+      ]
+    },
+    {
+      "slug": "ble-part-3",
+      "source": "https://github.com/rahul-lohra/myblog/blob/main/_posts/ble-chat-series/2018-12-27-ble-part-3.md",
+      "originalCharacters": 11458,
+      "importedCharacters": 11313,
+      "legacyUrls": [
+        "/ble/chat/application/2018/12/27/ble-part-3.html",
+        "/ble/chat/application/2018/12/26/ble-part-3.html"
+      ]
+    },
+    {
+      "slug": "creat-callback-via-typedef",
+      "source": "https://github.com/rahul-lohra/myblog/blob/main/_posts/dart/2019-05-26-creat-callback-via-typedef.md",
+      "originalCharacters": 2010,
+      "importedCharacters": 1897,
+      "legacyUrls": [
+        "/dart/2019/05/26/creat-callback-via-typedef.html",
+        "/dart/2019/05/25/creat-callback-via-typedef.html"
+      ]
+    },
+    {
+      "slug": "create-gql-formatter-plugin",
+      "source": "https://github.com/rahul-lohra/myblog/blob/main/_posts/plugins/2020-07-19-create-gql-formatter-plugin.md",
+      "originalCharacters": 16398,
+      "importedCharacters": 22659,
+      "legacyUrls": [
+        "/plugin/2020/07/19/create-gql-formatter-plugin.html",
+        "/plugin/2020/07/18/create-gql-formatter-plugin.html"
+      ]
+    },
+    {
+      "slug": "shadow-constraint-layout-with-round-corners",
+      "source": "https://github.com/rahul-lohra/myblog/blob/main/_posts/android-ui/2019-11-02-shadow-constraint-layout-with-round-corners.md",
+      "originalCharacters": 5532,
+      "importedCharacters": 16421,
+      "legacyUrls": [
+        "/android/2019/11/02/shadow-constraint-layout-with-round-corners.html",
+        "/android/2019/11/01/shadow-constraint-layout-with-round-corners.html"
+      ]
+    },
+    {
+      "slug": "circular-reveal",
+      "source": "https://github.com/rahul-lohra/myblog/blob/main/_posts/flutter/animation/2019-05-19-circular-reveal.md",
+      "originalCharacters": 7928,
+      "importedCharacters": 7757,
+      "legacyUrls": [
+        "/animation/2019/05/19/circular-reveal.html",
+        "/animation/2019/05/18/circular-reveal.html"
+      ]
+    }
+  ],
+  "remoteAssetFailures": [],
+  "note": "Published Jekyll posts are canonical. Supporting blog-posts includes unpublished BLE part 4; it was not imported. Source dates are preserved. Gist scripts expanded into static code. Article prose is preserved."
+}

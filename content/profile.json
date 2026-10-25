@@ -1,0 +1,105 @@
+{
+  "name": "Rahul Kumar Lohra",
+  "headline": "Staff-level Android Platform Engineer",
+  "summary": "Android platform engineer with 10+ years of experience building reliable mobile foundations, SDKs, and developer tools. I specialize in platform architecture, real-time communication, performance, and engineering standards that help teams build with confidence.",
+  "resumePath": "/resume/rahul-kumar-lohra.pdf",
+  "skills": ["Android architecture", "Kotlin", "Java", "Kotlin Multiplatform", "Jetpack Compose", "Coroutines & Flow", "WebRTC", "SDK design", "Performance profiling", "Gradle & CI", "Developer tooling", "Technical leadership"],
+  "experience": [
+    {
+      "company": "GetStream.io",
+      "role": "Senior Engineer",
+      "specialty": "Video SDK & WebRTC",
+      "start": "Nov 2024",
+      "end": "Present",
+      "summary": "Building a more reliable Android Video SDK, from WebRTC reconnection and incoming calls to audio routing and core SDK architecture.",
+      "highlights": [
+        "Architected a two-tier WebRTC reconnection strategy using existing ICE connectivity and full ICE re-establishment, informed by Android network changes and WebSocket health.",
+        "Reworked incoming-call ringing with polling fallback and ringing-attempt management to handle WebSocket disconnections.",
+        "Improved Android Telecom and Bluetooth audio integration, addressing concurrency, audio routing, permissions, and call-state consistency.",
+        "Modernized call management, camera lifecycle, authentication, and notification pipelines in the Android Video SDK."
+      ]
+    },
+    {
+      "company": "TikTok",
+      "role": "Senior Engineer",
+      "specialty": "Android Infrastructure & Architecture",
+      "start": "Dec 2022",
+      "end": "Nov 2024",
+      "summary": "Led Android architecture and developer tooling work across product teams, with a focus on reusable foundations, performance, and engineering standards.",
+      "highlights": [
+        "Led five engineers in designing and standardizing ASSEM, an Android architecture library covering UI, communication, and ViewModel layers, with adoption across four business lines.",
+        "Built internal code analysis tools and lint/CI enforcement pipelines to improve architectural consistency across seven business lines.",
+        "Optimized runtime performance through work including mmap-based file I/O and migrated concurrency from RxJava/Bolts to Kotlin Coroutines.",
+        "Aligned with international stakeholders and streamlined an aspect-oriented programming framework to support broader adoption."
+      ]
+    },
+    {
+      "company": "Green Agrevolution Pvt. Ltd.",
+      "role": "Principal Engineer",
+      "specialty": "DeHaat Business & AIMS apps",
+      "start": "May 2022",
+      "end": "Jul 2022",
+      "summary": "Managed three engineers across the DeHaat Business and AIMS apps, improving authentication, build consistency, and testing practices.",
+      "highlights": [
+        "Improved authentication flows using OpenID/AppAuth and worked with Firebase Remote Config and Datadog.",
+        "Standardized Gradle scripts to reduce redundant code, project size, and dependency conflicts.",
+        "Delivered a team session on unit testing with JUnit and MockK."
+      ]
+    },
+    {
+      "company": "Tokopedia",
+      "role": "Principal Engineer",
+      "specialty": "Android Platform & Developer Experience",
+      "start": "Aug 2019",
+      "end": "May 2022",
+      "summary": "Led Android teams and built reusable platform components and tools, supporting performance, delivery, and engineering quality.",
+      "highlights": [
+        "Led five to eight engineers across app domains, guiding delivery, mentoring, and architectural decisions.",
+        "Improved UI performance through profiling and rendering optimization, and built reusable global-dialog and media-picker components used across seven teams.",
+        "Developed API mocking tools, the GraphQL Formatter IntelliJ plugin, and CI test optimizations to improve developer workflows.",
+        "Drove Clean Architecture, Kotlin Coroutines/Flow, and MockK adoption while contributing to hiring, training, and technical leadership."
+      ]
+    },
+    {
+      "company": "Sd2 Labs",
+      "role": "Android Developer",
+      "specialty": "Shoto app",
+      "start": "Oct 2017",
+      "end": "Aug 2019",
+      "summary": "Built Android media and camera features, including collage, Boomerang, video, and GIF creation with FFmpeg.",
+      "highlights": [
+        "Worked on face detection, map clustering, SQLite, notifications, and background services.",
+        "Integrated REST APIs, multithreaded processing, camera and storage features, and image loading with Glide, Picasso, and Fresco."
+      ]
+    },
+    {
+      "company": "Red Gingers Technology",
+      "role": "Android Developer",
+      "specialty": "InOne app",
+      "start": "Apr 2017",
+      "end": "Oct 2017",
+      "summary": "Built commerce and service integrations for the InOne Android app.",
+      "highlights": [
+        "Integrated PayU, Ixigo, Zomato, Ola, and Uber services, along with REST APIs, Google Maps, and Places.",
+        "Implemented shopping-cart management, checkout, and Android UI features."
+      ]
+    },
+    {
+      "company": "Hatchitup Inc",
+      "role": "Android Developer",
+      "specialty": "Messaging & mobile integrations",
+      "start": "Jul 2016",
+      "end": "Jan 2017",
+      "summary": "Built messaging, file sharing, payments, and social sign-in features for Android.",
+      "highlights": [
+        "Created an XMPP chat module with the Smack API, Stripe payments, and Google, Facebook, and LinkedIn sign-in.",
+        "Implemented sharing for camera images and documents, using tools including Dagger 2, Retrofit, Glide, MVP, and Stetho."
+      ]
+    }
+  ],
+  "education": [
+    {"title": "B.Tech in Computer Science & Engineering", "institution": "GGSIPU, USICT", "period": "2012–2016"},
+    {"title": "Android Developer Nanodegree", "institution": "Udacity", "period": "Mar 2017"},
+    {"title": "Certified Android Developer", "institution": "Google", "period": "Aug 2017"}
+  ]
+}

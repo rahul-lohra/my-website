@@ -1,0 +1,28 @@
+{
+  "name": "rahul-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --dir frontend dev --host 0.0.0.0",
+    "dev:api": "pnpm generate && pnpm --dir backend dev",
+    "generate": "node --import tsx scripts/generate.ts",
+    "build": "pnpm generate && pnpm --dir frontend build",
+    "check": "pnpm generate && pnpm --dir frontend check && tsc -p backend/tsconfig.json --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "check:links": "node --import tsx scripts/check-links.ts",
+    "verify": "pnpm check && pnpm test && pnpm build && pnpm check:links"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "@types/node": "^26.6.5"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "zod": "^4.6.7"
+  },
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

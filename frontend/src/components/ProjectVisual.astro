@@ -1,0 +1,9 @@
+---
+const {slug}=Astro.props;
+---
+<div class:list={['project-visual',slug]} aria-hidden="true">
+ {slug==='snorkl'? <div class="network-art"><div class="art-window"><div class="window-bar"><i></i><i></i><i></i><span>snorkl / network inspector</span></div><div class="inspector"><div class="art-sidebar">◉<br/>⌁<br/>≡</div><div class="art-requests"><b>Network activity <em>● Live</em></b><div><span class="method">GET</span> /api/products <small>200</small></div><div><span class="method">GET</span> /api/profile <small>200</small></div><div><span class="method post">POST</span> /api/events <small>201</small></div><div><span class="method">WS</span> /stream <small>101</small></div><p class="art-caption">HTTP & WEBSOCKET · ANDROID</p></div></div></div></div>
+ :slug==='graphql-formatter'?<div class="code-art"><span class="code-filename">query.graphql <span>⌘</span></span><div><span class="purple">query</span> GetDeveloper {'{'}<br/>&nbsp;&nbsp; developer {'{'}<br/>&nbsp;&nbsp;&nbsp;&nbsp; <span class="light">name</span><br/>&nbsp;&nbsp;&nbsp;&nbsp; <span class="light">projects</span> {'{'}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; title<br/>&nbsp;&nbsp;&nbsp;&nbsp; {'}'}<br/>&nbsp;&nbsp; {'}'}<br/>{'}'}</div><span class="format-chip">✧ A little more readable.</span></div>
+ :slug==='circular-reveal'?<div class="reveal-art"><div class="reveal-orbit"></div><div class="reveal-circle"></div><span class="reveal-label">A new way to reveal.</span><span class="reveal-small">FLUTTER · CIRCULAR REVEAL</span></div>
+ :<div class="bluetooth-art"><span>ᛒ</span><i></i><span>ᛒ</span><p>NEARBY. CONNECTED.</p></div>}
+</div>

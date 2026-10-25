@@ -1,0 +1,5 @@
+---
+import Base from '../../layouts/Base.astro';import FilterList from '../../components/FilterList';import {posts,href,date,readingTime} from '../../lib/content';
+const items=(await posts()).map(p=>({...p.data,url:href(`/blog/${p.id}/`),date:date(p.data.date),readingTime:readingTime(p.body||'')}));
+---
+<Base title="Blog — Rahul Kumar Lohra" description="Complete technical articles on Android, Kotlin, Flutter, Dart, Bluetooth LE, and building developer tools."><section class="page-intro"><p class="eyebrow">THE BLOG / LEARNING OUT LOUD</p><h1>From the <em>workbench.</em></h1><p>Things I’ve learned by building, breaking, and figuring it out.<br class="desktop-break"/> Technical details, kept for the next curious person.</p></section><section class="section listing-section"><FilterList client:load items={items} label="articles"/></section></Base>

@@ -1,0 +1,5 @@
+---
+import {href,date,readingTime} from '../lib/content';
+const {post:p}=Astro.props;
+---
+<a class="post-row" href={href(`/blog/${p.id}/`)}><div class="post-date"><span>{date(p.data.date)}</span><small>{readingTime(p.body||'')} min read</small></div><div><span class="eyebrow">{p.data.topic}</span><h3>{p.data.title}</h3><p>{p.data.description}</p></div><span class="row-arrow" aria-hidden="true">↗</span></a>
